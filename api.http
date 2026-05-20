@@ -1,0 +1,72 @@
+POST http://localhost:8080/members/lions
+Content-Type: application/json
+
+{
+  "name": "이영희",
+  "major": "컴퓨터공학과",
+  "generation": 13,
+  "part": "백엔드",
+  "studentId": "20230002"
+}
+
+###
+
+POST http://localhost:8080/members/staffs
+Content-Type: application/json
+
+{
+  "name": "박민수",
+  "major": "소프트웨어학과",
+  "generation": 13,
+  "part": "백엔드",
+  "position": "부대표"
+}
+
+###
+
+POST http://localhost:8080/members/staffs
+Content-Type: application/json
+
+{
+  "name": "박민수",
+  "major": "소프트웨어학과",
+  "generation": 13,
+  "part": "백엔드",
+  "position": "부대표"
+}
+
+###
+
+GET http://localhost:8080/members/박민수
+
+###
+
+PUT http://localhost:8080/members/lions/이영희
+Content-Type: application/json
+
+{
+  "major": "정보통신공학과",
+  "generation": 13,
+  "part": "프론트엔드",
+  "studentId": "20230001"
+}
+
+###
+
+PUT http://localhost:8080/members/staffs/박민수
+Content-Type: application/json
+
+{
+  "major": "정보통신공학과",
+  "generation": 13,
+  "part": "프론트엔드",
+  "position": "대표"
+}
+
+###
+
+DELETE http://localhost:8080/members/이영희
+
+###
+
+DELETE http://localhost:8080/members/없는이름

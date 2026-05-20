@@ -7,7 +7,7 @@ public class Lion extends Role {
     private String studentId;
 
     public Lion(String name, String major, int generation, String part, String studentId) {
-        super(name, major, generation, part);
+        super(name, major, generation, part, "Lion");
         this.studentId = studentId;
     }
 
@@ -28,5 +28,9 @@ public class Lion extends Role {
     @Override
     public String getInfo() {
         return "📌 이름: " + getName() + " | 🎓 전공: " + getMajor() + " | 🔢 기수: " + getGeneration() + " | 💻 파트: " + getPart() + "\n🆔 학번: " + studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 }

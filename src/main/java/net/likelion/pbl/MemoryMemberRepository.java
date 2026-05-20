@@ -1,7 +1,6 @@
 package net.likelion.pbl;
 
 import net.likelion.pbl.role.Role;
-import net.likelion.pbl.MemberRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -29,6 +28,21 @@ public class MemoryMemberRepository implements MemberRepository {
     @Override
     public List<Role> findAll() {
         return members;
+    }
+
+    @Override
+    public void updateByName(String name, Role member) {
+        for (int i = 0; i < members.size(); i++) {
+            if (members.get(i).getName().equals(name)) {
+                members.set(i, member);
+                return;
+            }
+        }
+    }
+
+    @Override
+    public boolean deleteByName(String name) {
+        return members.removeIf(member -> member.getName().equals(name));
     }
 
     @Override

@@ -7,7 +7,7 @@ public class Staff extends Role {
     private String position;
 
     public Staff(String name, String major, int generation, String part, String position) {
-        super(name, major, generation, part);
+        super(name, major, generation, part, "Staff");
         this.position = position;
     }
 
@@ -28,5 +28,9 @@ public class Staff extends Role {
     @Override
     public String getInfo() {
         return "📌 이름: " + getName() + " | 🎓 전공: " + getMajor() + " | 🔢 기수: " + getGeneration() + " | 💻 파트: " + getPart() + "\n⭐ 직책: " + position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
